@@ -52,7 +52,7 @@ module Zabby
     # @return [Authentication key]
     def authenticate
       auth_message = format_message('user', 'login',
-                                    'user' => @user,
+                                    'username' => @user,
                                     'password' => @password)
       @auth = query_zabbix_rpc(auth_message)
     rescue Zabby::APIError
